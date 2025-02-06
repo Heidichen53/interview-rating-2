@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>面接評価基準</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      max-height: 90vh; /* 限制高度，支持滚动 */
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .rating-card {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .rating-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .rating-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+    }
+    .score {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .rating-5 .score { color: #28a745; }
+    .rating-4 .score { color: #17a2b8; }
+    .rating-3 .score { color: #ffc107; }
+    .rating-2 .score { color: #fd7e14; }
+    .rating-1 .score { color: #dc3545; }
+    .recommendation {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      color: white;
+    }
+    .strongly-hire { background-color: #28a745; }
+    .hire { background-color: #17a2b8; }
+    .no-hire { background-color: #fd7e14; }
+    .strongly-no-hire { background-color: #dc3545; }
+    .rating-content {
+      padding: 20px;
+    }
+    .rating-content h3 {
+      margin-top: 0;
+      color: #495057;
+      font-size: 18px;
+    }
+    .criteria-list {
+      margin: 0;
+      padding-left: 20px;
+      color: #555;
+    }
+    .criteria-list li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .rating-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .recommendation {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>面接評価基準</h1>
+
+    <!-- 5点 -->
+    <div class="rating-card rating-5">
+      <div class="rating-header">
+        <div class="score">5点 - 卓越</div>
+        <span class="recommendation strongly-hire">Strongly hire</span>
+      </div>
+      <div class="rating-content">
+        <h3>定義：当該能力が職務要件と完全に合致し、卓越したパフォーマンスを発揮し、期待を大きく上回る。</h3>
+        <ul class="criteria-list">
+          <li><strong>第一印象：</strong>非常に良い印象を与え、精神状態が良好で、強く印象に残る。</li>
+          <li><strong>専門能力：</strong>卓越した専門スキルを持ち、職務要件を大きく超え、業界トップレベルの能力を備えている。</li>
+          <li><strong>汎用能力：</strong>コミュニケーションが非常に魅力的で、論理的思考が緻密であり、複雑な問題を迅速に解決できる。</li>
+          <li><strong>文化適合度：</strong>会社文化に完全に適応し、卓越した大局観、責任感、公正かつ誠実な態度を示す。</li>
+          <li><strong>潜在力・成長性：</strong>非常に高い成長意欲と主体性を持ち、将来的に大きな成長が期待できる。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4点 -->
+    <div class="rating-card rating-4">
+      <div class="rating-header">
+        <div class="score">4点 - 優秀</div>
+        <span class="recommendation hire">Hire</span>
+      </div>
+      <div class="rating-content">
+        <h3>定義：当該能力が職務要件と高度にマッチし、優れたパフォーマンスを発揮する。</h3>
+        <ul class="criteria-list">
+          <li><strong>第一印象：</strong>プロフェッショナルな印象で、精神的にも前向きな態度を示す。</li>
+          <li><strong>専門能力：</strong>優れた専門スキルを持ち、業務を独立して効率的に遂行できる。</li>
+          <li><strong>汎用能力：</strong>コミュニケーションが明確で説得力があり、論理的思考が優れ、問題解決能力が高い。</li>
+          <li><strong>文化適合度：</strong>会社文化を深く理解し、良好な大局観と責任感を持つ。</li>
+          <li><strong>潜在力・成長性：</strong>高い向上心と主体性を持ち、成長の可能性が大きい。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3点 -->
+    <div class="rating-card rating-3">
+      <div class="rating-header">
+        <div class="score">3点 - 合格</div>
+        <span class="recommendation hire">Hire</span>
+      </div>
+      <div class="rating-content">
+        <h3>定義：当該能力が職務要件と概ね一致し、職務遂行が可能である。</h3>
+        <ul class="criteria-list">
+          <li><strong>第一印象：</strong>適切な印象を与え、精神状態も比較的良好である。</li>
+          <li><strong>専門能力：</strong>職務に基本的なスキルを持ち、業務遂行が可能である。</li>
+          <li><strong>汎用能力：</strong>コミュニケーションが明瞭で、論理的思考が一定の水準にあり、一般的な問題解決が可能。</li>
+          <li><strong>文化適合度：</strong>会社文化をある程度理解し、一定の大局観と責任感を示す。</li>
+          <li><strong>潜在力・成長性：</strong>ある程度の向上心と主体性を持ち、今後の成長が期待できる。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2点 -->
+    <div class="rating-card rating-2">
+      <div class="rating-header">
+        <div class="score">2点 - 要改善</div>
+        <span class="recommendation no-hire">No hire</span>
+      </div>
+      <div class="rating-content">
+        <h3>定義：当該能力が職務要件と部分的に一致しているが、明確な改善が求められる。</h3>
+        <ul class="criteria-list">
+          <li><strong>第一印象：</strong>平凡な印象で、精神状態があまり良くない。</li>
+          <li><strong>専門能力：</strong>一部の基本的なスキルは備えているが、コアスキルに欠けている。</li>
+          <li><strong>汎用能力：</strong>コミュニケーション能力が限られており、論理的思考が不明瞭で、問題解決能力が低い。</li>
+          <li><strong>文化適合度：</strong>会社文化への理解が浅く、主体的な姿勢や公正かつ誠実な態度が見られない。</li>
+          <li><strong>潜在力・成長性：</strong>成長意欲が低く、主体性が不足している。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1点 -->
+    <div class="rating-card rating-1">
+      <div class="rating-header">
+        <div class="score">1点 - 不合格</div>
+        <span class="recommendation strongly-no-hire">Strongly no hire</span>
+      </div>
+      <div class="rating-content">
+        <h3>定義：当該能力が職務要件と完全に一致せず、明らかな弱点や問題が見られる。</h3>
+        <ul class="criteria-list">
+          <li><strong>第一印象：</strong>精神状態が悪く、職務要件に適した印象を与えない。</li>
+          <li><strong>専門能力：</strong>コアスキルが大きく不足しており、基本的な職務遂行も難しい。</li>
+          <li><strong>汎用能力：</strong>コミュニケーション能力や論理的思考力が著しく不足し、効果的な意思疎通や問題解決ができない。</li>
+          <li><strong>文化適合度：</strong>会社の文化や価値観と全く合わず、大局観や責任感に欠けている。</li>
+          <li><strong>潜在力・成長性：</strong>向上心や主体性がなく、将来的な成長が見込めない。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+Add interview rating criteria
